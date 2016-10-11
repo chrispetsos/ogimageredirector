@@ -31,7 +31,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		var vimageurl = $("#vimageurl").val();
 		var vredirectto = $("#vredirectto").val();
-		if (!(name == '' || email == '')) {
+		if (!(vimageurl == '' || vredirectto == '')) {
 			$("#submitdata").empty();
 			$("#submitdata").append("vimageurl: " + vimageurl + "<br/>vredirectto: " + vredirectto + "<br/>Message: " + msg);
 		} else {
