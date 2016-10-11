@@ -21,9 +21,13 @@ $(document).ready(function() {
 						type: 'submit',
 						id: 'submit',
 						value: 'Create link'
-					}), $("<br/>"), $("<span/>", {
-						id: 'submitdata'
-					})))
+					}), $("<br/>"), $("<textarea/>", {
+						rows: '5px',
+						cols: '27px',
+						type: 'text',
+						id: 'submitdata',
+						name: 'submitdata'
+						})))
 });
 
 $(document).ready(function() {
