@@ -37,7 +37,7 @@ $(document).ready(function() {
 	        "https://api.bitly.com/v3/shorten?callback=?", 
 	        { 
 	            "format": "json",
-	            "apiKey": "f32d3b239ec08dcbcb26a119f4aa82207a569b08",
+	            "apiKey": "R_1e55cb75f8244e3795bf0c742d2eba77",
 	            "login": "chrispetsos",
 	            "longUrl": long_url
 	        },
