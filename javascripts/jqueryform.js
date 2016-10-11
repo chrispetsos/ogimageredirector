@@ -33,7 +33,7 @@ $(document).ready(function() {
 		var vredirectto = $("#vredirectto").val();
 		if (!(vimageurl == '' || vredirectto == '')) {
 			$("#submitdata").empty();
-			$("#submitdata").append("vimageurl: " + vimageurl + "<br/>vredirectto: " + vredirectto + "<br/>Message: " + msg);
+			$("#submitdata").append("vimageurl: " + vimageurl + "<br/>vredirectto: " + vredirectto);
 		} else {
 			alert("Please Fill All Fields.");
 		}
