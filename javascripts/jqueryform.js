@@ -54,9 +54,9 @@ $(document).ready(function() {
 		var vredirectto = $("#vredirectto").val();
 		if (!(vimageurl == '' || vredirectto == '')) {
 			var long_url = "https://ogimageredirector.herokuapp.com/redirect.jsp?imageURL=" + vimageurl + "&redirectURL=" + vredirectto;
-			var link = get_short_url(long_url, function(short_url) {
+			get_short_url(long_url, function(short_url) {
 				$("#submitdata").empty();
-				$("#submitdata").append(link);
+				$("#submitdata").append(short_url);
 			});
 		} else {
 			alert("Please Fill All Fields.");
