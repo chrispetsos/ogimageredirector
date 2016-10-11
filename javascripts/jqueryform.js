@@ -18,7 +18,7 @@ $(document).ready(function() {
 						name: 'redirectto',
 						placeholder: 'Linked page URL'
 					}), $("<br/>"), $("<input/>", {
-						type: 'input',
+						type: 'submit',
 						id: 'submit',
 						value: 'Create link'
 					})))
