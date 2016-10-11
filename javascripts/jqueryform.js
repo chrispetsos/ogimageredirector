@@ -21,20 +21,21 @@ $(document).ready(function() {
 						type: 'submit',
 						id: 'submit',
 						value: 'Create link'
+					}), $("<br/>"), $("<span/>", {
+						id: 'submitdata'
 					})))
 });
 
 $(document).ready(function() {
 	$("#submit").click(function(e) {
 		e.preventDefault();
-		/*var name = $("#name").val();
-		var email = $("#email").val();
-		var msg = $("#msg").val();
-		if (!(name == '' || email == '' || msg == '')) {
-		$("#submitdata").empty();
-		$("#submitdata").append("Name: " + name + "<br/>Email: " + email + "<br/>Message: " + msg);
+		var vimageurl = $("#vimageurl").val();
+		var vredirectto = $("#vredirectto").val();
+		if (!(name == '' || email == '')) {
+			$("#submitdata").empty();
+			$("#submitdata").append("vimageurl: " + vimageurl + "<br/>vredirectto: " + vredirectto + "<br/>Message: " + msg);
 		} else {
-		alert("Please Fill All Fields.");
-		}*/
+			alert("Please Fill All Fields.");
+		}
 	});
 });
