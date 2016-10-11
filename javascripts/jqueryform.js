@@ -17,7 +17,7 @@ type: 'text',
 id: 'vredirectto',
 name: 'redirectto',
 placeholder: 'Linked page URL'
-}), $("<br/>"), $("<input/>", {
+}), $("<br/>"), $("<button/>", {
 type: 'button',
 id: 'submit',
 value: 'Create link'
