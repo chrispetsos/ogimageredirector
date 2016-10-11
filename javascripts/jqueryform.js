@@ -31,14 +31,33 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+	function get_short_url(long_url, func)
+	{
+	    $.getJSON(
+	        "http://api.bitly.com/v3/shorten?callback=?", 
+	        { 
+	            "format": "json",
+	            "apiKey": "f32d3b239ec08dcbcb26a119f4aa82207a569b08",
+	            "login": "chrispetsos",
+	            "longUrl": long_url
+	        },
+	        function(response)
+	        {
+	            func(response.data.url);
+	        }
+	    );
+	}
+	
 	$("#submit").click(function(e) {
 		e.preventDefault();
 		var vimageurl = $("#vimageurl").val();
 		var vredirectto = $("#vredirectto").val();
 		if (!(vimageurl == '' || vredirectto == '')) {
-			var link = "https://ogimageredirector.herokuapp.com/redirect.jsp?imageURL=" + vimageurl + "&redirectURL=" + vredirectto;
-			$("#submitdata").empty();
-			$("#submitdata").append(link);
+			var long_url = "https://ogimageredirector.herokuapp.com/redirect.jsp?imageURL=" + vimageurl + "&redirectURL=" + vredirectto;
+			var link = get_short_url(long_url, function(short_url) {
+				$("#submitdata").empty();
+				$("#submitdata").append(link);
+			});
 		} else {
 			alert("Please Fill All Fields.");
 		}
