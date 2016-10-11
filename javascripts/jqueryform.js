@@ -32,8 +32,9 @@ $(document).ready(function() {
 		var vimageurl = $("#vimageurl").val();
 		var vredirectto = $("#vredirectto").val();
 		if (!(vimageurl == '' || vredirectto == '')) {
+			var link = "https://ogimageredirector.herokuapp.com/redirect.jsp?imageURL=" + vimageurl + "&redirectURL=" + vredirectto;
 			$("#submitdata").empty();
-			$("#submitdata").append("vimageurl: " + vimageurl + "<br/>vredirectto: " + vredirectto);
+			$("#submitdata").append(link);
 		} else {
 			alert("Please Fill All Fields.");
 		}
